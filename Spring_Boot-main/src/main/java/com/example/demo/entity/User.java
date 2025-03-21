@@ -1,13 +1,17 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "user_data")// Table name in PostgreSQL
 public class User {
     @Id
     private Integer id;
+
     private String name;
+
     private String email;
 
     public User() {}

@@ -25,7 +25,12 @@ public class UserService {
 
     //GET BY ID
     public String getUser(Integer id) {
-        return users.findById(id).toString();
+        User user = users.findById(id).orElse(null);
+        if (user != null) {
+            return "User found: " + user.getName();
+        } else {
+            return "User not found";
+        }
     }
     public String deleteAll(){
         users.deleteAll();

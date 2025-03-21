@@ -42,5 +42,6 @@ public class Controller {
     @GetMapping("/get/{id}")
     public String get(@PathVariable Integer id) {
         return userService.getUser(id);
+
     }
 }
