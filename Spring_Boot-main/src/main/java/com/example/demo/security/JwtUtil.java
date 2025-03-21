@@ -15,7 +15,7 @@ import java.util.function.Function;
     @Component
     public class JwtUtil {
 
-        private SecretKey secretKey = Keys.secretKeyFor(SignatureAlgorithm.HS256); // Change this to a secure key
+        private SecretKey secretKey = Keys.secretKeyFor(SignatureAlgorithm.HS256); 
         private long validity = 5 * 60 * 1000; // 5 minutes
 
 
