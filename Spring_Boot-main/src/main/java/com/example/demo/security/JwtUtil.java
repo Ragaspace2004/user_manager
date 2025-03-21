@@ -12,7 +12,7 @@ import javax.crypto.SecretKey;
 import java.util.Date;
 import java.util.function.Function;
 
-    @Service
+    @Component
     public class JwtUtil {
 
         private SecretKey secretKey = Keys.secretKeyFor(SignatureAlgorithm.HS256); // Change this to a secure key
