@@ -19,7 +19,7 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests((authorize) -> authorize
-                        .requestMatchers("/user/details","user/create").authenticated() // Require authentication for this endpoint
+                        .requestMatchers("/user/details","user/create","user/delete","user/update").authenticated() // Require authentication for this endpoint
                         .anyRequest().permitAll() // Allow all other requests
                 )
                 .httpBasic(HttpBasicConfigurer::disable);  // Enable basic authentication
